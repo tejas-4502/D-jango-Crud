@@ -19,6 +19,8 @@
             <tr>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
+                <th scope="col">Mobile No.</th>
+                <th scope="col">Email</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -27,6 +29,8 @@
             <tr>
                 <td>{{ x.firstname }}</td>
                 <td>{{ x.lastname }}</td>
+                <td>{{ x.mobno }}</td>
+                <td>{{ x.email }}</td>
                 <td>
                     <a href="{% url 'edit' x.id %}" class="btn btn-sm btn-primary">Edit</a>
 
