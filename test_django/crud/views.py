@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import Crud
 from django.http import HttpResponseRedirect
 
+def home(request):
+    return render(request, 'home.html')
+
 # Existing display function
 def crud(request):
     crud_data = Crud.objects.all().values()

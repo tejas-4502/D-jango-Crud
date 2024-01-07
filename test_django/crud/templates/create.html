@@ -14,29 +14,33 @@
     </style>
 </head>
 
-<body class="m-5">
-    <h1>Add Name</h1>
-    <form method="post" class="mb-3">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="id_firstname">First Name:</label>
-            <input type="text" class="form-control" id="id_firstname" name="firstname">
-        </div>
-        <div class="form-group">
-            <label for="id_lastname">Last Name:</label>
-            <input type="text" class="form-control" id="id_lastname" name="lastname">
-        </div>
-        <div class="form-group">
-            <label for="id_mobno">Mobile No.:</label>
-            <input type="number" class="form-control" id="id_mobno" name="mobno">
-        </div>
-        <div class="form-group">
-            <label for="id_email">Email:</label>
-            <input type="text" class="form-control" id="id_email" name="email">
-        </div>
-        <button type="submit" class="btn btn-primary">Save</button>
-        <a href="/display/" class="btn btn-secondary btn-back">Back</a>
-    </form>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <br>
+        <h1>Add Users</h1>
+        <form method="post" class="mb-3">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_firstname">First Name:</label>
+                <input type="text" class="form-control" id="id_firstname" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="id_lastname">Last Name:</label>
+                <input type="text" class="form-control" id="id_lastname" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="id_mobno">Mobile No.:</label>
+                <input type="number" class="form-control" id="id_mobno" name="mobno">
+            </div>
+            <div class="form-group">
+                <label for="id_email">Email:</label>
+                <input type="text" class="form-control" id="id_email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="/display/" class="btn btn-secondary btn-back">Back</a>
+        </form>
+    </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
