@@ -42,19 +42,19 @@
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_firstname">First Name:</label>
-                <input type="text" class="form-control" id="id_firstname" name="firstname">
+                <input type="text" class="form-control" id="id_firstname" name="firstname" required>
             </div>
             <div class="form-group">
                 <label for="id_lastname">Last Name:</label>
-                <input type="text" class="form-control" id="id_lastname" name="lastname">
+                <input type="text" class="form-control" id="id_lastname" name="lastname" required>
             </div>
             <div class="form-group">
                 <label for="id_mobno">Mobile No.:</label>
-                <input type="number" class="form-control" id="id_mobno" name="mobno">
+                <input type="text" class="form-control" id="id_mobno" name="mobno" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
             </div>
             <div class="form-group">
                 <label for="id_email">Email:</label>
-                <input type="text" class="form-control" id="id_email" name="email">
+                <input type="text" class="form-control" id="id_email" name="email" required>
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
             <a href="/display/" class="btn btn-secondary btn-back">Back</a>

@@ -39,6 +39,7 @@ def edit_view(request, id):
         instance.mobno = request.POST.get('mobno')
         instance.email = request.POST.get('email')
         instance.save()
+        messages.success(request, 'User updated successfully!')
         return HttpResponseRedirect('/display/')  # Redirect to display page
     return render(request, 'edit.html', {'instance': instance})
 
@@ -46,4 +47,5 @@ def edit_view(request, id):
 def delete_view(request, id):
     instance = get_object_or_404(Crud, id=id)
     instance.delete()
+    messages.success(request, 'User deleted successfully!')
     return HttpResponseRedirect('/display/')  # Redirect to display page
